@@ -242,6 +242,26 @@ dq.popBack()
 console.log(dq.back()) // 10
 ```
 
+### Queue
+
+기본적인 사용 방법은 C++와 같습니다.
+
+```js
+import { Queue } from './lib/index.js'
+
+const q = new Deque()
+
+q.push(10)
+q.push(-10)
+q.push(0)
+
+console.log(q.front()) // 0
+q.pop()
+console.log(q.front()) // -10
+q.pop()
+console.log(q.front()) // 10
+```
+
 ## TODO
 
 - [ ] test case 출력 값 비교
