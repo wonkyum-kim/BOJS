@@ -164,6 +164,27 @@ npm run copy:mac
 
 ## 라이브러리
 
+### input
+
+주어진 문자열을 공백과 줄바꿈을 기준으로 파싱하여 하나씩 반환합니다.
+
+```js
+// test-case.js
+export const rawInput = [`hi 3 10`]
+
+// index.js
+import { input } from './lib/index.js'
+
+const a = input.get
+console.log(typeof a, a) // string 'hi'
+
+const b = input.getNumber
+console.log(typeof b, b) // number 3
+
+const c = input.get
+console.log(typeof c, c) // string '10'
+```
+
 ### assert
 
 조건을 만족하지 않으면 에러가 발생합니다.
