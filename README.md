@@ -169,10 +169,10 @@ npm run copy:mac
 import { assert } from './lib/index.js'
 
 // OK
-assert(typeof 3 === 'number')
+assert(typeof 3 === 'number', '타입 에러')
 
 // Error
-assert(typeof 3 === 'string')
+assert(typeof 3 === 'string', '타입 에러')
 ```
 
 ## TODO
@@ -184,5 +184,5 @@ assert(typeof 3 === 'string')
   - [ ] Stack
   - [ ] Deque
   - [ ] PriorityQueue
-- [ ] 기타 라이브러리 추가
+- [x] 기타 라이브러리 추가
   - [x] assert
