@@ -28,7 +28,7 @@ export const rawInput = [
 
 ```js
 // 백준 1009번
-import { input } from './lib.js'
+import { input } from './lib/index.js'
 
 function solve() {
   let t = input.getNumber
@@ -106,7 +106,6 @@ function server() {
 }
 
 let input = process.platform !== 'linux' ? local() : server()
-
 let inputIndex = 0
 const inputLength = input.length
 
@@ -115,13 +114,12 @@ input = new Proxy(input, {
     if (inputIndex >= inputLength) throw new Error('input 값이 더 이상 없습니다.')
     if (prop === 'get') return target[inputIndex++]
     if (prop === 'getNumber') return parseInt(target[inputIndex++])
+    return target[prop]
   },
 })
 
-//----------------------------------------------------------------------------
-
 function solve() {
-  let t = parseInt(input.get)
+  let t = input.getNumber
   while (t--) {
     const a = input.getNumber
     const b = input.getNumber
@@ -161,6 +159,22 @@ npm run copy:mac
 - Windows
 - Mac
 
+## 라이브러리
+
+### assert
+
+조건을 만족하지 않으면 에러가 발생합니다.
+
+```js
+import { assert } from './lib/index.js'
+
+// OK
+assert(typeof 3 === 'number')
+
+// Error
+assert(typeof 3 === 'string')
+```
+
 ## TODO
 
 - [ ] test case 출력 값 비교
@@ -170,3 +184,5 @@ npm run copy:mac
   - [ ] Stack
   - [ ] Deque
   - [ ] PriorityQueue
+- [ ] 기타 라이브러리 추가
+  - [x] assert
