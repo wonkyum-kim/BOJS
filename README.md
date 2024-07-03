@@ -15,6 +15,8 @@ npm i
 
 `test-case.js`에 입력 값을 `rawInput` 배열에 백틱으로 감싼 문자열로 전달합니다.
 
+(선택 사항) 출력 값을 `rawOutput` 배열에 백틱으로 감싼 문자열로 전달합니다.
+
 ```js
 export const rawInput = [
   `5
@@ -23,6 +25,15 @@ export const rawInput = [
 6 2
 7 100
 9 635`,
+  // 이어서 계속 추가할 수 있습니다...
+]
+
+export const rawOutput = [
+  `1
+7
+6
+1
+9`,
   // 이어서 계속 추가할 수 있습니다...
 ]
 ```
@@ -74,6 +85,8 @@ npm run build
 ```
 
 `dist/index.js`에 빌드된 결과물이 출력됩니다.
+
+만약 `rawOutput`에 출력 값을 넣었다면, 실행 값과 비교하는 과정도 진행됩니다.
 
 ```js
 'use strict'
@@ -264,7 +277,7 @@ console.log(q.front()) // 10
 
 ## TODO
 
-- [ ] test case 출력 값 비교
+- [x] test case 출력 값 비교
 - [ ] Linux 지원
 - [ ] TypeScript로 전환
 - [ ] GitHub Actions 적용
