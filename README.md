@@ -175,14 +175,40 @@ assert(typeof 3 === 'number', '타입 에러')
 assert(typeof 3 === 'string', '타입 에러')
 ```
 
+### PriorityQueue
+
+우선순위 큐를 지원합니다.
+
+기본적인 사용 방법은 C++와 같습니다.
+
+```js
+import { PriorityQueue } from './lib/index.js'
+
+const pq = new PriorityQueue()
+
+pq.push(10)
+pq.push(-10)
+pq.push(0)
+
+console.log(pq.top() === 10) // true
+pq.pop()
+console.log(pq.top() === 0) // true
+pq.pop()
+pq.pop()
+console.log(pq.empty()) // true
+```
+
+최소 우선순위 큐가 필요하면 음수 값을 넣어서 사용하세요.
+
 ## TODO
 
 - [ ] test case 출력 값 비교
 - [ ] Linux 지원
-- [ ] 기본 자료구조 추가
+- [ ] TypeScript로 전환
+- [x] 기본 자료구조 추가
   - [ ] Queue
   - [ ] Stack
   - [ ] Deque
-  - [ ] PriorityQueue
+  - [x] PriorityQueue
 - [x] 기타 라이브러리 추가
   - [x] assert
