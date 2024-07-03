@@ -177,8 +177,6 @@ assert(typeof 3 === 'string', '타입 에러')
 
 ### PriorityQueue
 
-우선순위 큐를 지원합니다.
-
 기본적인 사용 방법은 C++와 같습니다.
 
 ```js
@@ -200,6 +198,26 @@ console.log(pq.empty()) // true
 
 최소 우선순위 큐가 필요하면 음수 값을 넣어서 사용하세요.
 
+### Deque
+
+기본적인 사용 방법은 C++와 같습니다.
+
+```js
+import { Deque } from './lib/index.js'
+
+const dq = new Deque()
+
+dq.pushFront(10)
+dq.pushFront(-10)
+dq.pushBack(0)
+
+console.log(dq.front()) // -10
+dq.popFront()
+console.log(dq.back()) // 0
+dq.popBack()
+console.log(dq.back()) // 10
+```
+
 ## TODO
 
 - [ ] test case 출력 값 비교
@@ -208,7 +226,7 @@ console.log(pq.empty()) // true
 - [x] 기본 자료구조 추가
   - [ ] Queue
   - [ ] Stack
-  - [ ] Deque
+  - [x] Deque
   - [x] PriorityQueue
 - [x] 기타 라이브러리 추가
   - [x] assert
