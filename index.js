@@ -1,4 +1,4 @@
-import { input } from './lib.js'
+import { input } from './lib'
 
 function solve() {}
 
