@@ -4,6 +4,3 @@
 # dist
 /dist
 
-# basic
-./index.js
-./test-case.js
