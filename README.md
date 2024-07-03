@@ -223,6 +223,7 @@ console.log(dq.back()) // 10
 - [ ] test case 출력 값 비교
 - [ ] Linux 지원
 - [ ] TypeScript로 전환
+- [ ] GitHub Actions 적용
 - [x] 기본 자료구조 추가
   - [ ] Queue
   - [ ] Stack
