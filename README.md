@@ -229,8 +229,8 @@ console.log(dq.back()) // 10
 - [ ] GitHub Actions 적용
 - [ ] 한 줄씩 입력 받는 방법 추가
 - [x] 기본 자료구조 추가
-  - [ ] Queue
-  - [ ] Stack
+  - [x] Queue
+  - [x] ~~Stack~~ Array로 대체 가능
   - [x] Deque
   - [x] PriorityQueue
 - [x] 기타 라이브러리 추가
