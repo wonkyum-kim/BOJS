@@ -1,0 +1,21 @@
+{
+  "name": "bojs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint index.js",
+    "build": "npm run lint && rollup -c",
+    "copy:win": "type .\\dist\\index.js | clip",
+    "copy:mac": "cat ./dist/index.js | pbcopy"
+  },
+  "author": "wonkyum-kim",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^9.6.0",
+    "prettier": "^3.3.2",
+    "rollup": "^4.18.0"
+  }
+}
