@@ -278,7 +278,7 @@ console.log(dq.back()) // 10
 ```js
 import { Queue } from './lib/index.js'
 
-const q = new Qeque()
+const q = new Queue()
 
 q.push(10)
 q.push(-10)
