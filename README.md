@@ -212,6 +212,17 @@ assert(typeof 3 === 'number', '타입 에러')
 assert(typeof 3 === 'string', '타입 에러')
 ```
 
+### array2d
+
+2차원 배열을 선언합니다.
+
+```js
+import { array2d } from './lib/index.js
+
+// 3행 4열, 초기 값을 0으로 설정
+const arr = array2d(3, 4, 0)
+```
+
 ### PriorityQueue
 
 기본적인 사용 방법은 C++와 같습니다.
@@ -289,3 +300,4 @@ console.log(q.front()) // 10
   - [x] PriorityQueue
 - [x] 기타 라이브러리 추가
   - [x] assert
+  - [x] array2d
