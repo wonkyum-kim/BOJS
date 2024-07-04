@@ -162,6 +162,10 @@ npm run copy:win
 
 # mac
 npm run copy:mac
+
+# linux
+sudo apt-get install xclip # xclip 설치 필요
+npm run copy
 ```
 
 ## 어떻게 작동하는 건가요?
@@ -170,10 +174,11 @@ npm run copy:mac
 
 `rollup`을 사용해서 모든 코드를 하나로 번들링하여 빌드합니다.
 
-## 지원 대상
+## 주의 사항
 
-- Windows
-- Mac
+Node.js v16.13.1 보다 높아야합니다.
+
+리눅스에서 실행하려면 [백준 채점 서버](https://help.acmicpc.net/language/info)와 구분해야 하기 때문입니다.
 
 ## 라이브러리
 
@@ -289,7 +294,7 @@ console.log(q.front()) // 10
 ## TODO
 
 - [x] test case 출력 값 비교
-- [ ] Linux 지원
+- [x] Linux 지원
 - [ ] TypeScript로 전환
 - [ ] GitHub Actions 적용
 - [ ] 한 줄씩 입력 받는 방법 추가
