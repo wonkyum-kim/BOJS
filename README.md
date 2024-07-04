@@ -49,7 +49,7 @@ function solve() {
   while (t--) {
     const a = input.getNumber
     const b = input.getNumber
-    if (a % 10 == 0) {
+    if (a % 10 === 0) {
       console.log(10)
       continue
     }
@@ -139,7 +139,7 @@ function solve() {
   while (t--) {
     const a = input.getNumber
     const b = input.getNumber
-    if (a % 10 == 0) {
+    if (a % 10 === 0) {
       console.log(10)
       continue
     }
@@ -262,7 +262,7 @@ console.log(dq.back()) // 10
 ```js
 import { Queue } from './lib/index.js'
 
-const q = new Deque()
+const q = new Qeque()
 
 q.push(10)
 q.push(-10)
