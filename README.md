@@ -168,6 +168,12 @@ sudo apt-get install xclip # xclip 설치 필요
 npm run copy
 ```
 
+새로운 문제를 풀기 위해 `index.js`와 `test-case.js`의 내용을 지우고 싶다면 아래 명령어를 입력합니다.
+
+```shell
+npm run clear
+```
+
 ## 어떻게 작동하는 건가요?
 
 `input`에 `Proxy` 객체를 사용해서 `get`이나 `getNumber` 프로퍼티에 접근하면 가로채서 입력 값을 반환합니다.

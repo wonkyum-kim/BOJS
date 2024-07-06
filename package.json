@@ -1,6 +1,6 @@
 {
   "name": "bojs",
-  "version": "1.9.1",
+  "version": "1.9.2",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -10,7 +10,8 @@
     "build": "npm run lint && npm test test/output.test.js && rollup -c",
     "copy:win": "type .\\dist\\index.js | clip",
     "copy:mac": "cat ./dist/index.js | pbcopy",
-    "copy": "cat ./dist/index.js | xclip -selection clipboard"
+    "copy": "cat ./dist/index.js | xclip -selection clipboard",
+    "clear": "node ./lib/clear.js"
   },
   "author": "wonkyum-kim",
   "license": "MIT",
