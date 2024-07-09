@@ -1,7 +1,10 @@
 import util from 'node:util'
 import { exec as _exec } from 'node:child_process'
 import { rawOutput } from '../test-case.js'
-import { replaceNewlinesAndSplit } from '../lib/processing.js'
+
+function replaceNewlinesAndSplit(input) {
+  return input.replace(/\n/g, ' ').trim().split(' ')
+}
 
 // https://stackoverflow.com/questions/53268672/how-do-i-wait-for-an-exec-process-to-finish-in-jest
 const exec = util.promisify(_exec)
