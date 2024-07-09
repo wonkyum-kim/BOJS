@@ -88,73 +88,7 @@ npm run build
 
 만약 `rawOutput`에 출력 값을 넣었다면, 실행 값과 비교하는 과정도 진행됩니다.
 
-```js
-'use strict'
-
-var fs = require('fs')
-
-const rawInput = [
-  `5
-1 6
-3 7
-6 2
-7 100
-9 635`,
-]
-
-function replaceNewlinesAndSplit(input) {
-  return input.replace(/\n/g, ' ').trim().split(' ')
-}
-
-function currentTestCaseNumber() {
-  const argv = process.argv.slice(2)
-  return argv.length === 0 ? 0 : argv[0]
-}
-
-function local() {
-  return rawInput.map((raw) => {
-    return replaceNewlinesAndSplit(raw)
-  })[currentTestCaseNumber()]
-}
-
-function server() {
-  return replaceNewlinesAndSplit(fs.readFileSync('/dev/stdin').toString())
-}
-
-let input = process.platform !== 'linux' ? local() : server()
-let inputIndex = 0
-const inputLength = input.length
-
-input = new Proxy(input, {
-  get: (target, prop) => {
-    if (inputIndex >= inputLength) throw new Error('input 값이 더 이상 없습니다.')
-    if (prop === 'get') return target[inputIndex++]
-    if (prop === 'getNumber') return parseInt(target[inputIndex++])
-    return target[prop]
-  },
-})
-
-function solve() {
-  let t = input.getNumber
-  while (t--) {
-    const a = input.getNumber
-    const b = input.getNumber
-    if (a % 10 === 0) {
-      console.log(10)
-      continue
-    }
-    let ans = a
-    for (let i = 0; i < b - 1; ++i) {
-      ans = (a * ans) % 10
-    }
-    console.log(ans % 10)
-  }
-}
-
-solve()
-```
-
-직접 복사해도 되지만 명령어를 입력하여 빌드한 결과물을 클립보드에 복사할 수 있습니다.
+`dist/index.js`를 직접 복사해도 되지만 명령어를 입력하여 빌드한 결과물을 클립보드에 복사할 수 있습니다.
 
 ```shell
 # windows
@@ -206,6 +140,25 @@ const b = input.getNumber
 console.log(typeof b, b) // number 3
 
 const c = input.get
+console.log(typeof c, c) // string '10'
+```
+
+✅ 시간 초과 또는 메모리 초과가 발생하면 객체 프로퍼티가 아니라 메서드로 접근해주세요.
+
+```js
+// test-case.js
+export const rawInput = [`hi 3 10`]
+
+// index.js
+import { input } from './lib/index.js'
+
+const a = input.get()
+console.log(typeof a, a) // string 'hi'
+
+const b = input.getNumber()
+console.log(typeof b, b) // number 3
+
+const c = input.get()
 console.log(typeof c, c) // string '10'
 ```
 
@@ -316,7 +269,6 @@ console.log(q.front()) // 10
 - [x] Linux 지원
 - [ ] TypeScript로 전환
 - [ ] GitHub Actions 적용
-- [ ] 한 줄씩 입력 받는 방법 추가
 - [x] 기본 자료구조 추가
   - [x] Queue
   - [x] ~~Stack~~ Array로 대체 가능
