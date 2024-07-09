@@ -269,6 +269,7 @@ console.log(q.front()) // 10
 - [x] Linux 지원
 - [ ] TypeScript로 전환
 - [ ] GitHub Actions 적용
+- [ ] rollup에서 한글이 깨지는 문제
 - [x] 기본 자료구조 추가
   - [x] Queue
   - [x] ~~Stack~~ Array로 대체 가능
