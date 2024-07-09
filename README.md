@@ -143,25 +143,6 @@ const c = input.get
 console.log(typeof c, c) // string '10'
 ```
 
-✅ 시간 초과 또는 메모리 초과가 발생하면 객체 프로퍼티가 아니라 메서드로 접근해주세요.
-
-```js
-// test-case.js
-export const rawInput = [`hi 3 10`]
-
-// index.js
-import { input } from './lib/index.js'
-
-const a = input.get()
-console.log(typeof a, a) // string 'hi'
-
-const b = input.getNumber()
-console.log(typeof b, b) // number 3
-
-const c = input.get()
-console.log(typeof c, c) // string '10'
-```
-
 ### assert
 
 조건을 만족하지 않으면 에러가 발생합니다.
