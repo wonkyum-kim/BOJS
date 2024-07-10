@@ -120,6 +120,8 @@ Node.js v16.13.1 보다 높아야합니다.
 
 리눅스에서 실행하려면 [백준 채점 서버](https://help.acmicpc.net/language/info)와 구분해야 하기 때문입니다.
 
+Windows powershell에서 `npm run copy:win`으로 코드 복사 시 한글이 깨지는 문제가 발생하면 해당 [블로그](https://worldclassproduct.tistory.com/entry/%EC%9C%88%EB%8F%84%EC%9A%B0-%ED%8C%8C%EC%9B%8C%EC%89%98-%ED%95%9C%EA%B8%80-%EA%B9%A8%EC%A7%80%EB%8A%94-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95-2%EA%B0%80%EC%A7%80)를 보고 설정을 업데이트 하세요
+
 ## 라이브러리
 
 ### input
@@ -260,7 +262,7 @@ console.log(q.front()) // 10
 - [x] Linux 지원
 - [ ] TypeScript로 전환
 - [ ] GitHub Actions 적용
-- [ ] rollup에서 한글이 깨지는 문제
+- [x] powershell에서 한글이 깨지던 문제 해결 방안 찾기
 - [x] 기본 자료구조 추가
   - [x] Queue
   - [x] ~~Stack~~ Array로 대체 가능
