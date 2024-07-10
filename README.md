@@ -175,10 +175,20 @@ const arr = array2d(3, 4, 0)
 target이 arr의 모든 원소보다 클 경우 arr.length를 반환합니다.
 
 ```js
-import { lowerBound } from '../lib/index.js'
+import { lowerBound } from './lib/index.js'
 
 const arr = [1, 2, 2, 3, 3, 5, 6]
 console.log(lowerBound(arr, 4)) // 5
+```
+
+## popCount
+
+정수 비트에서 1의 개수를 반환합니다.
+
+```js
+import { popCount } from './lib/index.js
+
+console.log(popCount(7))  // 3
 ```
 
 ### PriorityQueue
@@ -260,3 +270,4 @@ console.log(q.front()) // 10
   - [x] assert
   - [x] array2d
   - [x] lowerBound
+  - [x] popCount
