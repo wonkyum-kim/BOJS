@@ -256,6 +256,22 @@ q.pop()
 console.log(q.front()) // 10
 ```
 
+### SegmentTree
+
+sum, min, max segmentTree를 지원합니다.
+
+bigInt도 지원합니다.
+
+자세한 사용법은 `test/segment-tree.js`를 참조하세요
+
+```js
+import { SegmentTree } from './lib/index.js'
+
+const seg = new SegmentTree('sum', 8)
+seg.init([5, 8, 6, 3, 2, 7, 2, 6])
+console.log(seg.sum(0, 3)) // 22
+```
+
 ## TODO
 
 - [x] test case 출력 값 비교
@@ -268,6 +284,7 @@ console.log(q.front()) // 10
   - [x] ~~Stack~~ Array로 대체 가능
   - [x] Deque
   - [x] PriorityQueue
+  - [x] SegmentTree
 - [x] 기타 라이브러리 추가
   - [x] assert
   - [x] array2d
