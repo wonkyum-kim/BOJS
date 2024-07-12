@@ -64,7 +64,7 @@ function solve() {
 solve()
 ```
 
-`input.get`은 공백 문자를 기준으로 문자열을 하나씩 가져옵니다.
+`input.get`은 공백 문자와 줄바꿈을 기준으로 문자열을 하나씩 가져옵니다.
 
 `input.getNumber`는 `input.get`과 같지만 문자열을 숫자로 변환하여 가져옵니다.
 
@@ -262,7 +262,7 @@ sum, min, max segmentTree를 지원합니다.
 
 bigInt도 지원합니다.
 
-자세한 사용법은 `test/segment-tree.js`를 참조하세요
+자세한 사용법은 `test/segment-tree.test.js`를 참조하세요
 
 ```js
 import { SegmentTree } from './lib/index.js'
