@@ -1,6 +1,6 @@
 {
   "name": "bojs",
-  "version": "2.1.4",
+  "version": "2.2.0",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -11,7 +11,8 @@
     "copy:win": "type .\\dist\\index.js | clip",
     "copy:mac": "cat ./dist/index.js | pbcopy",
     "copy": "cat ./dist/index.js | xclip -selection clipboard",
-    "clear": "node ./lib/clear.js"
+    "clear": "node ./lib/clear.js",
+    "sample": "node ./lib/sample-data.js"
   },
   "author": "wonkyum-kim",
   "license": "MIT",
@@ -20,5 +21,8 @@
     "jest": "^29.7.0",
     "prettier": "^3.3.2",
     "rollup": "^4.18.0"
+  },
+  "dependencies": {
+    "jsdom": "^24.1.1"
   }
 }

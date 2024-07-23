@@ -13,9 +13,14 @@
 npm i
 ```
 
-`test-case.js`에 입력 값을 `rawInput` 배열에 백틱으로 감싼 문자열로 전달합니다.
+풀고 싶은 문제 번호를 함께 전달하여 예제 입출력을 가져옵니다.
 
-(선택 사항) 출력 값을 `rawOutput` 배열에 백틱으로 감싼 문자열로 전달합니다.
+```shell
+# 1009번의 예제를 가져온다.
+npm run sample 1009
+```
+
+더 많은 테스트 케이스를 추가하고 싶다면 직접 `test-case.js`에 입력 값을 `rawInput` 배열에, 출력 값을 `rawOutput` 배열에 백틱으로 감싼 문자열로 전달합니다.
 
 ```js
 export const rawInput = [
@@ -86,9 +91,7 @@ npm run build
 
 `dist/index.js`에 빌드된 결과물이 출력됩니다.
 
-만약 `rawOutput`에 출력 값을 넣었다면, 실행 값과 비교하는 과정도 진행됩니다.
-
-`dist/index.js`를 직접 복사해도 되지만 명령어를 입력하여 빌드한 결과물을 클립보드에 복사할 수 있습니다.
+결과물을 직접 복사해도 되지만 명령어를 입력하여 빌드한 결과물을 클립보드에 복사할 수 있습니다.
 
 ```shell
 # windows
@@ -276,8 +279,9 @@ console.log(seg.sum(0, 3)) // 22
 
 - [x] test case 출력 값 비교
 - [x] Linux 지원
-- [ ] TypeScript로 전환
+- ~~[ ] TypeScript로 전환~~
 - [ ] GitHub Actions 적용
+- [x] 예제 입출력 파싱
 - [x] powershell에서 한글이 깨지던 문제 해결 방안 찾기
 - [x] 기본 자료구조 추가
   - [x] Queue
