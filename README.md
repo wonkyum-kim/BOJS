@@ -186,7 +186,7 @@ const arr = [1, 2, 2, 3, 3, 5, 6]
 console.log(lowerBound(arr, 4)) // 5
 ```
 
-## popCount
+### popCount
 
 정수 비트에서 1의 개수를 반환합니다.
 
