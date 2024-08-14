@@ -3,7 +3,7 @@
 `BOJS`는 자바스크립트로 백준을 쉽게 풀 수 있도록 도와줍니다.
 
 - 쉬운 입력 방법
-- 다양한 자료구조와 라이브러리 지원(예정)
+- 다양한 자료구조와 라이브러리 지원
 
 ## 어떻게 사용하나요?
 
@@ -252,11 +252,11 @@ q.push(10)
 q.push(-10)
 q.push(0)
 
-console.log(q.front()) // 0
+console.log(q.front()) // 10
 q.pop()
 console.log(q.front()) // -10
 q.pop()
-console.log(q.front()) // 10
+console.log(q.front()) // 0
 ```
 
 ### SegmentTree

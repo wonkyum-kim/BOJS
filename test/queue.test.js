@@ -8,11 +8,11 @@ describe('queue', () => {
     q.push(3)
     q.push(10)
 
-    expect(q.front()).toBe(10)
+    expect(q.front()).toBe(5)
     q.pop()
     expect(q.front()).toBe(3)
     q.pop()
-    expect(q.front()).toBe(5)
+    expect(q.front()).toBe(10)
     q.pop()
     expect(q.empty()).toBe(true)
     expect(() => q.front()).toThrow(new Error('empty'))
