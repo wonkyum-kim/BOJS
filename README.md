@@ -261,19 +261,17 @@ console.log(q.front()) // 0
 
 ### SegmentTree
 
-sum, min, max segmentTree를 지원합니다.
+sum, min, max를 지원합니다.
 
 bigInt도 지원합니다.
 
 자세한 사용법은 `test/segment-tree.test.js`를 참조하세요
 
-```js
-import { SegmentTree } from './lib/index.js'
+### LazySegmentTree
 
-const seg = new SegmentTree('sum', 8)
-seg.init([5, 8, 6, 3, 2, 7, 2, 6])
-console.log(seg.sum(0, 3)) // 22
-```
+bigInt도 지원합니다.
+
+자세한 사용법은 `test/lazy-segment-tree.test.js`를 참조하세요
 
 ## TODO
 
@@ -289,6 +287,7 @@ console.log(seg.sum(0, 3)) // 22
   - [x] Deque
   - [x] PriorityQueue
   - [x] SegmentTree
+  - [x] LazySegmentTree
 - [x] 기타 라이브러리 추가
   - [x] assert
   - [x] array2d
