@@ -191,9 +191,9 @@ console.log(lowerBound(arr, 4)) // 5
 정수 비트에서 1의 개수를 반환합니다.
 
 ```js
-import { popCount } from './lib/index.js
+import { popCount } from './lib/index.js'
 
-console.log(popCount(7))  // 3
+console.log(popCount(7)) // 3
 ```
 
 ### PriorityQueue
@@ -259,37 +259,60 @@ q.pop()
 console.log(q.front()) // 0
 ```
 
-### SegmentTree
+## Tips
 
-sum, min, max를 지원합니다.
+출력 시간을 줄이기 위해서 정답은 한 번에 출력하도록 합니다.
 
-bigInt도 지원합니다.
+```js
+function solve() {
+  const ans = []
 
-자세한 사용법은 `test/segment-tree.test.js`를 참조하세요
+  for (let i = 0; i < 3; ++i) {
+    const result = doSomething()
+    ans.push(result)
+  }
 
-### LazySegmentTree
+  console.log(ans.join(' '))
+}
+```
 
-bigInt도 지원합니다.
+map을 사용하면 코드를 더 짧게 작성할 수 있습니다.
 
-자세한 사용법은 `test/lazy-segment-tree.test.js`를 참조하세요
+```js
+// n, m 입력 받기
+const [n, m] = [0, 0].map(() => input.getNumber)
 
-## TODO
+// 길이가 n인 배열 입력 받기
+const arr = new Array(n).fill(0).map(() => input.getNumber)
+```
 
-- [x] test case 출력 값 비교
-- [x] Linux 지원
-- ~~[ ] TypeScript로 전환~~
-- [ ] GitHub Actions 적용
-- [x] 예제 입출력 파싱
-- [x] powershell에서 한글이 깨지던 문제 해결 방안 찾기
-- [x] 기본 자료구조 추가
-  - [x] Queue
-  - [x] ~~Stack~~ Array로 대체 가능
-  - [x] Deque
-  - [x] PriorityQueue
-  - [x] SegmentTree
-  - [x] LazySegmentTree
-- [x] 기타 라이브러리 추가
-  - [x] assert
-  - [x] array2d
-  - [x] lowerBound
-  - [x] popCount
+BigInt는 문자열로 입력 받은 다음 변환합니다.
+
+```js
+const big = BigInt(input.get)
+```
+
+EOF가 들어올 때까지 입력을 받아야하는 경우에는 try ... catch를 사용합니다.
+
+```js
+try {
+  while (true) {
+    const x = input.getNumber
+    // do something...
+  }
+} catch {
+  return
+}
+```
+
+스페셜 저지 문제의 예제를 `npm run sample problemNumber`를 사용해 불러온 경우 build 과정에서 에러가 발생할 수 있습니다.
+
+`test-case.js`에서 `rawOutput`을 비우고 build 하세요.
+
+```js
+// test-case.js
+
+export const rawInput = ['...']
+
+export const rawOutput = [] // empty
+```

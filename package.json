@@ -1,7 +1,7 @@
 {
   "name": "bojs",
-  "version": "2.3.1",
-  "description": "",
+  "version": "2.3.2",
+  "description": "BOJS는 자바스크립트로 백준을 쉽게 풀 수 있도록 도와줍니다.",
   "main": "index.js",
   "type": "module",
   "scripts": {
