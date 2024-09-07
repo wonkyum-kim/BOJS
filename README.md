@@ -295,13 +295,13 @@ const big = BigInt(input.get)
 EOF가 들어올 때까지 입력을 받아야하는 경우에는 try ... catch를 사용합니다.
 
 ```js
-try {
-  while (true) {
+while (true) {
+  try {
     const x = input.getNumber
-    // do something...
+    doSomething()
+  } catch {
+    break
   }
-} catch {
-  return
 }
 ```
 
