@@ -29,5 +29,5 @@ describe('output', () => {
         expect(rec).toBe(answer[j])
       })
     }
-  })
+  }, 10000) // 10s
 })

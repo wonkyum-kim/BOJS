@@ -316,3 +316,33 @@ export const rawInput = ['...']
 
 export const rawOutput = [] // empty
 ```
+
+`npm run build`의 기본 테스트 시간은 10s 입니다.
+
+필요에 따라서 시간을 조절할 수 있습니다.
+
+```js
+// test/output.test.js
+describe('output', () => {
+  it('Check all test cases', async () => {
+    if (rawOutput.length === 0) return
+
+    const parsed = rawOutput.map((raw) => {
+      return replaceNewlinesAndSplit(raw)
+    })
+
+    for (let i = 0; i < parsed.length; ++i) {
+      const { stdout } = await exec(`node index.js ${i}`)
+
+      // 출력된 결과
+      const received = replaceNewlinesAndSplit(stdout)
+      // 정답
+      const answer = parsed[i]
+
+      received.forEach((rec, j) => {
+        expect(rec).toBe(answer[j])
+      })
+    }
+  }, 10000) // 10s
+})
+```
