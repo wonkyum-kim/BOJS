@@ -173,19 +173,6 @@ import { array2d } from './lib/index.js
 const arr = array2d(3, 4, 0)
 ```
 
-### lowerBound
-
-정렬된 arr내에서 target 이상인 첫 번째 원소의 인덱스를 반환합니다.
-
-target이 arr의 모든 원소보다 클 경우 arr.length를 반환합니다.
-
-```js
-import { lowerBound } from './lib/index.js'
-
-const arr = [1, 2, 2, 3, 3, 5, 6]
-console.log(lowerBound(arr, 4)) // 5
-```
-
 ### popCount
 
 정수 비트에서 1의 개수를 반환합니다.
